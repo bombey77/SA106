@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i(TAG, "onClick");
 
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.contFrOne);
-        ((TextView) fragment.getView().findViewById(R.id.tvFrOne)).setText("Text Fragment One");
+        Fragment fragment1 = getSupportFragmentManager().findFragmentById(R.id.contFrOne);
+        ((TextView) fragment1.getView().findViewById(R.id.tvFrOne)).setText("Set new text fragment one");
 
-        Fragment fragment1 = getSupportFragmentManager().findFragmentById(R.id.container);
-        ((TextView) fragment1.getView().findViewById(R.id.tvFrTwo)).setText("Text Fragment Two");
+        //Fragment fragment2 = getSupportFragmentManager().findFragmentById(R.id.container);
+        ((TextView) secondFragment.getView().findViewById(R.id.tvFrTwo)).setText("Set new text fragment two");
     }
 }

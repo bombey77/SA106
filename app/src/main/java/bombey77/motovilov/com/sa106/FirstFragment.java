@@ -27,6 +27,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "First Fragment");
+                ((Button) getActivity().findViewById(R.id.btnAddFragment)).setText("New button text...");
             }
         });
         return view;
