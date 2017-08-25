@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SecondFragment.SomeInventLister {
 
     private static final String TAG = "myLogs";
 
@@ -37,5 +37,12 @@ public class MainActivity extends AppCompatActivity {
 
         //Fragment fragment2 = getSupportFragmentManager().findFragmentById(R.id.container);
         ((TextView) secondFragment.getView().findViewById(R.id.tvFrTwo)).setText("Set new text fragment two");
+    }
+
+
+    @Override
+    public void someText(String s) {
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.contFrOne);
+        ((TextView) fragment.getView().findViewById(R.id.tvFrOne)).setText("Text from fragment 2 " + s);
     }
 }
